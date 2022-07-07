@@ -5,14 +5,14 @@ A starter project with react native 0.68, @storybook/react-native 6.0 beta, stor
 ## Web
 
 <p align="center">
-  <img alt="preview" width="600" src="https://github.com/blackstone86/storybook-rn/blob/main/preview/web.png?raw=true">
+  <img alt="Web" width="600" src="https://github.com/blackstone86/storybook-rn/blob/main/preview/web.png?raw=true">
 </p>
 
 ## Emulator and Xiaomi11_Ultra
 
 <p align="center">
-  <img alt="preview" width="300" src="https://github.com//blackstone86/storybook-rn/blob/main/preview/emulator.png?raw=true">
-  <img alt="preview" width="300" style="margin-left: 50px" src="https://github.com//blackstone86/storybook-rn/blob/main/preview/xiaomi11_Ultra.jpg?raw=true">
+  <img alt="Emulator" width="300" height="600" src="https://github.com//blackstone86/storybook-rn/blob/main/preview/emulator.png?raw=true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img alt="Xiaomi11_Ultra" width="300" height="600" src="https://github.com//blackstone86/storybook-rn/blob/main/preview/xiaomi11_Ultra.jpg?raw=true">
 </p>
 
 ## Core Librarys
