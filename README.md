@@ -1,4 +1,4 @@
-A starter project with react native 0.68, @storybook/react-native 6.0 beta, storybook/addon-react-native-web
+A starter project with storybook and react native
 
 # Preview
 
