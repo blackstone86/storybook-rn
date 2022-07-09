@@ -36,24 +36,27 @@ To run on the web use
 
 ```
 yarn storybook
+// or
+yarn web // without storybook's functionality, for example: doc
 ```
 
-To run on ios or android
+Before eject, To run on android or ios
 
 ```
-yarn start
+yarn start // opening Android or IOS with expo app、reload app...
 ```
 
-in another terminal run
+When you ejected without install, to run on android or ios
 
 ```
-yarn ios
+yarn android // build app and install, then opening Android、reload app...
+yarn ios // build app and install, then opening IOS、reload app...
 ```
 
-or
+When you ejected and installed, to run on android or ios
 
 ```
-yarn android
+yarn start:devclient
 ```
 
 If you add new stories on the native (ondevice version) you either need to have the watcher running or run the stories loader
