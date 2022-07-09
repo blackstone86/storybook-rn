@@ -1,4 +1,4 @@
-A starter project with react native 0.68, @storybook/react-native 6.0 beta, storybook/addon-react-native-web
+A starter project with storybook and expo
 
 # Preview
 
@@ -19,8 +19,8 @@ A starter project with react native 0.68, @storybook/react-native 6.0 beta, stor
 
 | Library name     | Version |
 | ---------------- | ------- |
-| react            | 18.2.0  |
-| react-native     | 0.69.1  |
+| react            | 17.0.2  |
+| react-native     | 0.68.2  |
 | react-native-web | 0.18.6  |
 | start-storybook  | 6.5.9   |
 
