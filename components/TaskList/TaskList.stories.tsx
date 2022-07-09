@@ -1,25 +1,35 @@
 import * as React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import MyTaskList from './TaskList'
+import TaskList from './TaskList'
 import { defaultTasks, actions, withPinnedTasks } from './data'
+import { store } from '../../lib/store'
+import { Provider } from 'react-redux'
 
 export default {
-  title: 'components/MyTaskList',
-  component: MyTaskList
-} as ComponentMeta<typeof MyTaskList>
+  title: 'components/TaskList',
+  component: TaskList
+} as ComponentMeta<typeof TaskList>
 
-export const Default: ComponentStory<typeof MyTaskList> = (args) => (
-  <MyTaskList tasks={defaultTasks} {...actions} />
+export const Default: ComponentStory<typeof TaskList> = (args) => (
+  <Provider store={store}>
+    <TaskList tasks={defaultTasks} {...actions} />
+  </Provider>
 )
 
-export const WithPinnedTasks: ComponentStory<typeof MyTaskList> = (args) => (
-  <MyTaskList tasks={withPinnedTasks} {...actions} />
+export const WithPinnedTasks: ComponentStory<typeof TaskList> = (args) => (
+  <Provider store={store}>
+    <TaskList tasks={withPinnedTasks} {...actions} />
+  </Provider>
 )
 
-export const Loading: ComponentStory<typeof MyTaskList> = (args) => (
-  <MyTaskList loading tasks={[]} {...actions} />
+export const Loading: ComponentStory<typeof TaskList> = (args) => (
+  <Provider store={store}>
+    <TaskList loading tasks={[]} {...actions} />
+  </Provider>
 )
 
-export const Empty: ComponentStory<typeof MyTaskList> = (args) => (
-  <MyTaskList tasks={[]} {...actions} />
+export const Empty: ComponentStory<typeof TaskList> = (args) => (
+  <Provider store={store}>
+    <TaskList tasks={[]} {...actions} />
+  </Provider>
 )
