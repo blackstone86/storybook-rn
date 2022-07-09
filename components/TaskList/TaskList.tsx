@@ -4,6 +4,7 @@ import { FlatList, Text, SafeAreaView } from 'react-native'
 import { styles } from '../../constants/globalStyles'
 import { useDispatch, useSelector } from 'react-redux'
 import type { RootState } from '../../lib/store'
+import { archiveTask, pinTask } from '../../lib/redux'
 
 type TaskListPropType = {
   loading?: boolean
@@ -18,13 +19,12 @@ function TaskList({
   onPinTask,
   onArchiveTask
 }: TaskListPropType) {
-  tasks = useSelector((state: RootState) => state.task.tasks)
-
+  const tasksData = useSelector((state: RootState) => state.task.tasks)
   const dispatch = useDispatch()
 
   const events = {
-    onPinTask,
-    onArchiveTask
+    onPinTask: (id: string) => dispatch(pinTask({ id })),
+    onArchiveTask: (id: string) => dispatch(archiveTask({ id }))
   }
 
   if (loading) {
@@ -35,7 +35,7 @@ function TaskList({
     )
   }
 
-  if (tasks.length === 0) {
+  if (tasksData.length === 0) {
     return (
       <SafeAreaView style={styles.ListItems}>
         <Text>empty</Text>
@@ -46,7 +46,7 @@ function TaskList({
   return (
     <SafeAreaView style={styles.ListItems}>
       <FlatList
-        data={tasks}
+        data={tasksData}
         keyExtractor={(task) => task.id}
         renderItem={({ item }) => (
           <Task key={item.id} task={item} {...events} />

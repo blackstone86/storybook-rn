@@ -18,7 +18,7 @@ export type TaskPropType = {
 export default function Task({
   task: { id, title, state },
   onArchiveTask = (id: string) => {},
-  onPinTask = () => {}
+  onPinTask = (id: string) => {}
 }: TaskPropType) {
   return (
     <SafeAreaView style={styles.ListItem}>

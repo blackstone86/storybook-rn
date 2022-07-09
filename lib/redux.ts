@@ -31,16 +31,17 @@ const initialState: StateType = {
   ]
 }
 
-type Action = {
+type ActionType = {
   id: string
 }
 
 const taskStateReducer: (
   taskState: TaskStateType
-) => (state: StateType, action: PayloadAction<Action>) => StateType = (
+) => (state: StateType, action: PayloadAction<ActionType>) => StateType = (
   taskState: TaskStateType
 ) => {
-  return (state: StateType, action: PayloadAction<Action>) => {
+  return (state: StateType, action: PayloadAction<ActionType>) => {
+    console.log(action)
     return {
       ...state,
       tasks: state.tasks.map((task: TaskType) =>
@@ -54,10 +55,10 @@ export const taskSlice = createSlice({
   name: 'task',
   initialState,
   reducers: {
-    archiveTask: (state, action: PayloadAction<Action>) => {
+    archiveTask: (state, action: PayloadAction<ActionType>) => {
       return taskStateReducer(TASK_STATE.TASK_INBOX)(state, action)
     },
-    pinTask: (state, action: PayloadAction<Action>) => {
+    pinTask: (state, action: PayloadAction<ActionType>) => {
       return taskStateReducer(TASK_STATE.TASK_PINNED)(state, action)
     }
   }
