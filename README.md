@@ -24,7 +24,7 @@ A starter project with storybook and react native
 | react-native-web | 0.18.6  |
 | start-storybook  | 6.5.9   |
 
-# getting started
+# Getting started
 
 To get all the dependencies run
 
