@@ -12,7 +12,7 @@ const TASK_STATE: {
 
 type TaskStateType = 'TASK_INBOX' | 'TASK_ARCHIVED' | 'TASK_PINNED'
 
-type TaskType = {
+export type TaskType = {
   id: string
   title: string
   state: TaskStateType
@@ -41,7 +41,6 @@ const taskStateReducer: (
   taskState: TaskStateType
 ) => {
   return (state: StateType, action: PayloadAction<ActionType>) => {
-    console.log(action)
     return {
       ...state,
       tasks: state.tasks.map((task: TaskType) =>
@@ -56,7 +55,7 @@ export const taskSlice = createSlice({
   initialState,
   reducers: {
     archiveTask: (state, action: PayloadAction<ActionType>) => {
-      return taskStateReducer(TASK_STATE.TASK_INBOX)(state, action)
+      return taskStateReducer(TASK_STATE.TASK_ARCHIVED)(state, action)
     },
     pinTask: (state, action: PayloadAction<ActionType>) => {
       return taskStateReducer(TASK_STATE.TASK_PINNED)(state, action)

@@ -1,46 +1,47 @@
 import * as React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import MyTask from './Task'
-import { task } from './data'
+import Task from './Task'
+import { TASK_STATE } from './consts'
+import { task, actions } from './data'
 
 export default {
-  title: 'components/MyTask',
-  component: MyTask
-} as ComponentMeta<typeof MyTask>
+  title: 'components/Task',
+  component: Task
+} as ComponentMeta<typeof Task>
 
-export const Default: ComponentStory<typeof MyTask> = (args) => (
-  <MyTask {...args} />
-)
+export const Default: ComponentStory<typeof Task> = (args) => <Task {...args} />
 
-export const Pinned: ComponentStory<typeof MyTask> = (args) => (
-  <MyTask {...args} />
-)
+export const Pinned: ComponentStory<typeof Task> = (args) => <Task {...args} />
 
-export const Archived: ComponentStory<typeof MyTask> = (args) => (
-  <MyTask {...args} />
+export const Archived: ComponentStory<typeof Task> = (args) => (
+  <Task {...args} />
 )
 
 Default.args = {
-  task
+  task,
+  ...actions
 }
 
 Pinned.args = {
+  ...Default.args,
   task: {
     ...task,
-    state: 'TASK_PINNED'
+    state: TASK_STATE.TASK_PINNED
   }
 }
 
 Pinned.args = {
+  ...Default.args,
   task: {
     ...task,
-    state: 'TASK_PINNED'
+    state: TASK_STATE.TASK_PINNED
   }
 }
 
 Archived.args = {
+  ...Default.args,
   task: {
     ...task,
-    state: 'TASK_ARCHIVED'
+    state: TASK_STATE.TASK_ARCHIVED
   }
 }

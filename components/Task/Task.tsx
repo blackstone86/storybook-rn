@@ -2,18 +2,8 @@ import * as React from 'react'
 import { TextInput, SafeAreaView, TouchableOpacity, View } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { styles } from '../../constants/globalStyles'
-
-export type TaskType = {
-  id: string
-  title: string
-  state: string
-}
-
-export type TaskPropType = {
-  task: TaskType
-  onArchiveTask?: (id: string) => void
-  onPinTask?: (id: string) => void
-}
+import { TaskPropType } from './types'
+import { TASK_STATE } from './consts'
 
 export default function Task({
   task: { id, title, state },
@@ -24,7 +14,7 @@ export default function Task({
     <SafeAreaView style={styles.ListItem}>
       <SafeAreaView style={styles.ListItem}>
         <TouchableOpacity onPress={() => onArchiveTask(id)}>
-          {state !== 'TASK_ARCHIVED' ? (
+          {state !== TASK_STATE.TASK_ARCHIVED ? (
             <View style={styles.CheckBox} />
           ) : (
             <MaterialCommunityIcons name="check" size={24} color="black" />
@@ -33,7 +23,7 @@ export default function Task({
         <TextInput
           placeholder="Input Title"
           style={
-            state === 'TASK_ARCHIVED'
+            state === TASK_STATE.TASK_ARCHIVED
               ? styles.ListItemInputTaskArchived
               : styles.ListItemInputTask
           }
@@ -44,7 +34,7 @@ export default function Task({
           <MaterialCommunityIcons
             name="star"
             size={20}
-            color={state !== 'TASK_PINNED' ? '#eee' : '#26c6da'}
+            color={state !== TASK_STATE.TASK_PINNED ? '#eee' : '#26c6da'}
           />
         </TouchableOpacity>
       </SafeAreaView>
