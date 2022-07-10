@@ -1,7 +1,7 @@
-import * as React from 'react'
+import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import TaskList from './TaskList'
-import { store } from './lib/store'
+import { store } from '../../lib/store'
 import { Provider } from 'react-redux'
 
 export default {

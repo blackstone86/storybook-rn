@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { TextInput, SafeAreaView, TouchableOpacity, View } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { styles } from '../../constants/globalStyles'

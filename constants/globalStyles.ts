@@ -114,7 +114,7 @@ export const styles = StyleSheet.create({
     fontFamily: 'NunitoSans'
   },
   titlepage: {
-    fontSize: 20,
+    // fontSize: 20,
     lineHeight: 24
   },
   TitleWrapper: {

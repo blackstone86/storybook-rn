@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import Task from '../Task/Task'
 import { FlatList, Text, SafeAreaView } from 'react-native'
 import { styles } from '../../constants/globalStyles'

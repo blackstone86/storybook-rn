@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import PureTaskList from './PureTaskList'
 import { defaultTasks, withPinnedTasks } from './data'

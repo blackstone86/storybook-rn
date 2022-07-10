@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import Task from './Task'
 import { TASK_STATE } from './consts'

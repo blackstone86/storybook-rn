@@ -1,9 +1,9 @@
-import * as React from 'react'
+import React from 'react'
 import { FlatList, Text, SafeAreaView } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import Task from '../Task/Task'
-import type { RootState } from './lib/store'
-import { archiveTask, pinTask } from './lib/taskSlice'
+import type { RootState } from '../../lib/store'
+import { archiveTask, pinTask } from '../../lib/taskSlice'
 import { TaskListPropType } from './types'
 import { styles } from '../../constants/globalStyles'
 
