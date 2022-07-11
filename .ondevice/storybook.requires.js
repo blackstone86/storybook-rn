@@ -30,7 +30,6 @@ try {
 } catch {}
 
 const getStories = () => {
-  // used by app
   return [
     require('../components/Button/Button.stories.tsx'),
     require('../components/PureTaskList/PureTaskList.stories.tsx'),

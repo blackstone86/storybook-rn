@@ -1,5 +1,5 @@
+// 需要手动配置
 module.exports = {
-  // used by app
   stories: ['../?(components|screens)/**/*.stories.?(ts|tsx|js|jsx)'],
   addons: [
     '@storybook/addon-ondevice-notes',

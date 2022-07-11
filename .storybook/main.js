@@ -1,8 +1,9 @@
+// 需要手动配置
 module.exports = {
-  // used by web
+  // yarn start 命令执行后，生成.ondevice/storybook.requires.js内容
   stories: [
-    '../components/**/*.stories.mdx',
-    '../@(components|screens)/**/*.stories.@(js|jsx|ts|tsx)'
+    '../?(components|screens)/**/*.stories.mdx',
+    '../?(components|screens)/**/*.stories.?(js|jsx|ts|tsx)'
   ],
   addons: [
     '@storybook/addon-links',
