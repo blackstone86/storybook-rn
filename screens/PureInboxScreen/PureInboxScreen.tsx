@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, SafeAreaView, View } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
-import TaskList from '../TaskList'
+import TaskList from '../../components/TaskList'
 import { PureInboxScreenPropType } from './types'
 import { styles } from '../../constants/globalStyles'
 

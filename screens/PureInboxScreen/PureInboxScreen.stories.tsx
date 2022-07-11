@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import { store } from '../../lib/store'
 
 export default {
-  title: 'components/PureInboxScreen',
+  title: 'screens/PureInboxScreen',
   component: PureInboxScreen,
   decorators: [
     (Story) => (

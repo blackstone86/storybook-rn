@@ -30,12 +30,13 @@ try {
 } catch {}
 
 const getStories = () => {
+  // used by app
   return [
     require('../components/Button/Button.stories.tsx'),
-    require('../components/TaskList/PureTaskList.stories.tsx'),
-    require('../components/TaskList/PureInboxScreen.stories.tsx'),
+    require('../components/PureTaskList/PureTaskList.stories.tsx'),
     require('../components/Task/Task.stories.tsx'),
-    require('../components/TaskList/TaskList.stories.tsx')
+    require('../components/TaskList/TaskList.stories.tsx'),
+    require('../screens/PureInboxScreen/PureInboxScreen.stories.tsx')
   ]
 }
 
