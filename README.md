@@ -21,7 +21,7 @@ A starter project with storybook and expo
 | ---------------- | ------- |
 | react            | 17.0.2  |
 | react-native     | 0.68.2  |
-| react-native-web | 0.18.6  |
+| react-native-web | 0.17.7  |
 | start-storybook  | 6.5.9   |
 
 # Getting started

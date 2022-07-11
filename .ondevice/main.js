@@ -1,6 +1,6 @@
 // 需要手动配置
 module.exports = {
-  stories: ['../?(components|screens)/**/*.stories.?(ts|tsx|js|jsx)'],
+  stories: ['../components/**/*.stories.?(ts|tsx|js|jsx)'],
   addons: [
     '@storybook/addon-ondevice-notes',
     '@storybook/addon-ondevice-controls',
